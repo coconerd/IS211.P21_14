@@ -77,6 +77,7 @@ ON BTL1."KhoSanPham_QLBanHang"
 TO QuanLyKho;
 
 -- Xem thông tin của quan hệ KHOSANPHAM_QLKHO, KHOSANPHAM_QLBANHANG ở chi nhánh 1 và chi nhánh 3.
+GRANT CONNECT TO QuanLyKhoVirtual;
 GRANT SELECT ON BTL1."KhoSanPham_QLKho" TO QuanLyKhoVirtual;
 GRANT SELECT ON BTL1."KhoSanPham_QLBanHang" TO QuanLyKhoVirtual;
 
@@ -117,6 +118,7 @@ ON BTL1."ChiTietHoaDon"
 TO NhanVien;
 
 -- Xem được thông tin của quan hệ HOADON, CHITIETHOADON ở chi nhánh 2 và chi nhánh 3.
+GRANT CONNECT TO NhanVienVirtual;
 GRANT SELECT ON BTL1."HoaDon" TO NhanVienVirtual;
 GRANT SELECT ON BTL1."ChiTietHoaDon" TO NhanVienVirtual;
 
@@ -174,6 +176,7 @@ GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."KhoSanPham_QLKho" TO QuanLyKho;
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."KhoSanPham_QLBanHang" TO QuanLyKho;
 
 -- Xem thông tin của quan hệ KHOSANPHAM_QLKHO, KHOSANPHAM_QLBANHANG ở chi nhánh 2 và chi nhánh 3.
+GRANT CONNECT TO QuanLyKhoVirtual;
 GRANT SELECT ON BTL1."KhoSanPham_QLKho" TO QuanLyKhoVirtual;
 GRANT SELECT ON BTL1."KhoSanPham_QLBanHang" TO QuanLyKhoVirtual;
 
@@ -194,6 +197,7 @@ GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."HoaDon" TO NhanVien;
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."ChiTietHoaDon" TO NhanVien;
 
 -- Xem được thông tin của quan hệ HOADON, CHITIETHOADON ở chi nhánh 2 và chi nhánh 3.
+GRANT CONNECT TO NhanVienVirtual;
 GRANT SELECT ON BTL1."HoaDon" TO NhanVienVirtual;
 GRANT SELECT ON BTL1."ChiTietHoaDon" TO NhanVienVirtual;
 
@@ -206,9 +210,8 @@ CONNECT TO NhanVienVirtual IDENTIFIED BY password USING
 'ducminh_link';
 
 ----------------------------------@ducminh-----------------------------
-GiamDocVirtual: 
-Xem, thêm, xóa, sửa thông tin của quan hệ nhân viên; được xem thông tin của tất cả quan hệ còn lại ở chi nhánh 3:
-
+-- GiamDocVirtual: 
+-- Xem, thêm, xóa, sửa thông tin của quan hệ nhân viên; được xem thông tin của tất cả quan hệ còn lại ở chi nhánh 3:
 
 GRANT CONNECT TO GiamDocVirtual
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."NhanVien" TO GiamDocVirtual;
@@ -223,20 +226,20 @@ GRANT SELECT ON BTL1."ChiTietHoaDon" TO GiamDocVirtual;
 GRANT SELECT ON BTL1."KhoSanPham_QLKho" TO GiamDocVirtual;
 GRANT SELECT ON BTL1."KhoSanPham_QLBanHang" TO GiamDocVirtual;
 
-QuanLyKho:
-Xem, thêm, xóa, sửa thông tin của các quan hệ SanPham, DanhMuc_SanPham, ThuocTinh_SanPham:
+-- QuanLyKho:
+-- Xem, thêm, xóa, sửa thông tin của các quan hệ SanPham, DanhMuc_SanPham, ThuocTinh_SanPham:
 
 GRANT CONNECT TO QuanLyKho;
 GRANT SELECT, INSERT, UPDATE, DELETE ON BTL1."SanPham" TO QuanLyKho;
 GRANT SELECT, INSERT, UPDATE, DELETE ON BTL1."DanhMuc_SanPham" TO QuanLyKho;
 GRANT SELECT, INSERT, UPDATE, DELETE ON BTL1."ThuocTinh_SanPham" TO QuanLyKho;
 
-Xem, thêm, xóa, sửa thông tin của các quan hệ KhoSanPham_QLKho, KhoSanPham_QLBanHang:
+-- Xem, thêm, xóa, sửa thông tin của các quan hệ KhoSanPham_QLKho, KhoSanPham_QLBanHang:
 
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."KhoSanPham_QLKho" TO QuanLyKho;
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."KhoSanPham_QLBanHang" TO QuanLyKho;
 
-Xem thông tin của các quan hệ KhoSanPham_QLKho, KhoSanPham_QLBanHang ở chi nhánh 1 và 2:
+-- Xem thông tin của các quan hệ KhoSanPham_QLKho, KhoSanPham_QLBanHang ở chi nhánh 1 và 2:
 
 CREATE PUBLIC DATABASE LINK QuanLyKho31Link
 CONNECT TO QuanLyKhoVirtual IDENTIFIED BY password USING
@@ -245,23 +248,23 @@ CREATE PUBLIC DATABASE LINK QuanLyKho32Link
 CONNECT TO QuanLyKhoVirtual IDENTIFIED BY password USING
 'hienphan_link';
 
-QuanLyKhoVirtual: 
-Xem thông tin của quan hệ KhoSanPham_QLKho, KhoSanPham_QLBanHang ở chi nhánh 2:
+-- QuanLyKhoVirtual: 
+-- Xem thông tin của quan hệ KhoSanPham_QLKho, KhoSanPham_QLBanHang ở chi nhánh 2:
 GRANT SELECT ON BTL1."KhoSanPham_QLKho" TO QuanLyKhoVirtual;
 GRANT SELECT ON BTL1."KhoSanPham_QLBanHang" TO QuanLyKhoVirtual;
 
-NhanVien:
-Xem, thêm, xóa, sửa được thông tin của quan hệ KHACHHANG:
+-- NhanVien:
+-- Xem, thêm, xóa, sửa được thông tin của quan hệ KHACHHANG:
 
 GRANT CONNECT TO NhanVien;
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."KhachHang" TO NhanVien;
 
-Xem, thêm, xóa, sửa được thông tin của quan hệ HOADON, CHITIETHOADON ở chi nhánh 3:
+-- Xem, thêm, xóa, sửa được thông tin của quan hệ HOADON, CHITIETHOADON ở chi nhánh 3:
 
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."HoaDon" TO NhanVien;
 GRANT SELECT, INSERT, DELETE, UPDATE ON BTL1."ChiTietHoaDon" TO NhanVien;
 
-Xem được thông tin của quan hệ HoaDon, ChiTietHoaDon tại chi nhánh 1 và chi nhánh 2:
+-- Xem được thông tin của quan hệ HoaDon, ChiTietHoaDon tại chi nhánh 1 và chi nhánh 2:
 
 CREATE PUBLIC DATABASE LINK NhanVien31Link
 CONNECT TO NhanVienVirtual IDENTIFIED BY password USING
@@ -272,8 +275,8 @@ CONNECT TO NhanVienVirtual IDENTIFIED BY password USING
 'hienphan_link';
 
 
-NhanVienVirtual:
-Xem được thông tin của quan hệ HoaDon, ChiTietHoaDon ở chi nhánh 3:
+-- NhanVienVirtual:
+-- Xem được thông tin của quan hệ HoaDon, ChiTietHoaDon ở chi nhánh 3:
 
 GRANT SELECT ON BTL1."HoaDon" TO NhanVienVirtual;
 GRANT SELECT ON BTL1."ChiTietHoaDon" TO NhanVienVirtual;
