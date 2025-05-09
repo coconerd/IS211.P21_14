@@ -1,4 +1,20 @@
 🌾 You’re unbeleafable!
+
+## Giới thiệu đồ án môn học 
+- **Tên môn học**: 
+- **Mã lớp**: 
+- **Tên đồ án**: 
+
+## Nhóm thực hiện
+**Tên nhóm: Coconerd** 🥥
+
+| Họ và tên          | MSSV     | Vai trò     | Liên hệ                     |
+|--------------------|----------|-------------|-----------------------------|
+|🌱  Nguyễn Đỗ Đức Minh | 22520872 | Team leader   | nddminh2021@gmail.com          |
+|🌱  Phan Thị Thủy Hiền | 22520423 | Team member | thuyhienphanthi2004@gmail.com |
+|🌱  Trần Vũ Bão   | 22520124 | Team member | tranvubao2004@gmail.com          |
+|🌱  Phan Thành Công       | 22520170 | Team member | phanthanhcong982004@gmail.com          |
+
 # Bài tập lớn 1: 
 ##  Lược đồ cơ sở dữ liệu quản lý cửa hàng bán cây cảnh PlantParadise:
 ![image](https://github.com/user-attachments/assets/b22f3eba-2262-4276-8079-d453bf8e84f6)
