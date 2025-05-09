@@ -24,15 +24,22 @@
   CHITIETHOADON3 = CHITIETHOADON ⋉MaHoaDon  (HOADON3)
 
 - Quan hệ KHOSANPHAM được phân mảnh hỗn hợp thành các quan hệ  KHOSANPHAM_QLKHO và KHOSANPHAM_QLBANHANG.
-Trong đó: Quan hệ KHOSANPHAM_QLKHO chứa các thông tin để quản lý việc nhập sản phẩm cũng như quản lý tồn kho.
+  Trong đó: Quan hệ KHOSANPHAM_QLKHO chứa các thông tin để quản lý việc nhập sản phẩm cũng như quản lý tồn kho.
   KHOSANPHAM_QLKHO1= 𝜋MaChiNhanh, MaSanPham, NgayCapNhat, SoLuong (KHOSANPHAM ⋉MaChiNhanh CHINHANH1)
   KHOSANPHAM_QLKHO2 = 𝜋MaChiNhanh, MaSanPham, NgayCapNhat, SoLuong (KHOSANPHAM ⋉MaChiNhanh CHINHANH2)
   KHOSANPHAM_QLKHO3 = 𝜋MaChiNhanh, MaSanPham, NgayCapNhat, SoLuong (KHOSANPHAM ⋉MaChiNhanh CHINHANH3)
 
 - Quan hệ KHOSANPHAM_QLBANHANG để quản lý thông tin tình trạng bán hàng của các sản phẩm.
-  KHOSANPHAM_QLBANHANG1 = 𝜋MaChiNhanh, MaSanPham, TinhTrang, NgayCapNhat, TongSoLuongDaBan, TongSoLuongDanhGia, TongSoLuongSao (KHOSANPHAM ⋉MaChiNhanh CHINHANH1)
-  KHOSANPHAM_QLBANHANG2 = 𝜋MaChiNhanh, MaSanPham, TinhTrang, NgayCapNhat, TongSoLuongDaBan, TongSoLuongDanhGia, TongSoLuongSao (KHOSANPHAM ⋉MaChiNhanh CHINHANH2)
-  KHOSANPHAM_QLBANHANG3 = 𝜋MaChiNhanh, MaSanPham, TinhTrang, NgayCapNhat, TongSoLuongDaBan, TongSoLuongDanhGia, TongSoLuongSao (KHOSANPHAM ⋉MaChiNhanh CHINHANH3)
+  KHOSANPHAM_QLBANHANG1 =
+      𝜋MaChiNhanh, MaSanPham, TinhTrang, NgayCapNhat, TongSoLuongDaBan,
+      TongSoLuongDanhGia, TongSoLuongSao (KHOSANPHAM ⋉MaChiNhanh CHINHANH1)
+  KHOSANPHAM_QLBANHANG2 =
+      𝜋MaChiNhanh, MaSanPham, TinhTrang, NgayCapNhat, TongSoLuongDaBan,
+      TongSoLuongDanhGia, TongSoLuongSao (KHOSANPHAM ⋉MaChiNhanh CHINHANH2)
+  KHOSANPHAM_QLBANHANG3 =
+      𝜋MaChiNhanh, MaSanPham, TinhTrang, NgayCapNhat, TongSoLuongDaBan,
+      TongSoLuongDanhGia, TongSoLuongSao (KHOSANPHAM ⋉MaChiNhanh CHINHANH3)
 
 - Quan hệ KHACHHANG, SANPHAM, DANHMUC_SANPHAM, THUOCTINHSANPHAM được nhân bản tại tất cả các chi nhánh.
 ```
+
