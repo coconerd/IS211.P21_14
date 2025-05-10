@@ -1,9 +1,9 @@
 🌾 You’re unbeleafable!
 
 ## Giới thiệu đồ án môn học 
-- **Tên môn học**: 
-- **Mã lớp**: 
-- **Tên đồ án**: 
+- **Tên môn học**: Cơ sở dữ liệu phân tán
+- **Mã lớp**: IS211.P21
+- **Tên đồ án**: THIẾT KẾ CƠ SỞ DỮ LIỆU PHÂN TÁN TRÊN HỆ QUẢN TRỊ CSDL QUAN HỆ ORACLE
 
 ## Nhóm thực hiện
 **Tên nhóm: Coconerd** 🥥
