@@ -1,5 +1,21 @@
 ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
 
+CREATE USER BTL1 IDENTIFIED BY password;
+GRANT CONNECT, DBA TO BTL1;
+
+ALTER SESSION SET CURRENT_SCHEMA = BTL1;
+
+SELECT * FROM "ChiNhanh"
+SELECT * FROM "SanPham"
+SELECT * FROM "ThuocTinh_SanPham"
+SELECT * FROM "DanhMuc_SanPham"
+SELECT * FROM "ChiTietHoaDon"
+SELECT * FROM "HoaDon"
+SELECT * FROM "NhanVien"
+SELECT * FROM "KhachHang"
+SELECT * FROM "KhoSanPham_QLBanHang"
+SELECT * FROM "KhoSanPham_QLKho"
+
 ----------------------------------@hienphan-----------------------------
 -- Tạo role
 CREATE USER GiamDocVirtual IDENTIFIED BY password;
